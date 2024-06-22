@@ -1,0 +1,574 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.HeaderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 35px 32px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+.ProductSearch{
+  display: none;
+}
+.issticky {
+  padding: 20px 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.MenuSet {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.MenuButton {
+  width: 165px;
+  box-shadow: 5px 5px 25px -5px rgba(143, 197, 192, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+.MenuBtn:hover {
+  box-shadow: 2px 2px 6px 0px rgba(143, 197, 192, 0.2);
+  transform: translateY(2px);
+}
+
+.MenuBtn {
+  border: none;
+  background: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transform: translateY(0);
+  transition: all 0.4s;
+}
+
+.MenuIcon:before {
+  content: "\F479";
+  font-family: bootstrap-icons;
+  color: white;
+  font-size: 22px;
+  transition: 0.4s;
+}
+
+.MenuIcon:after {
+  display: none;
+  color: white;
+  content: "\F12F";
+  font-family: bootstrap-icons;
+  font-size: 22px;
+  transition: 0.4s;
+}
+
+.MenuButton:hover .MenuIcon:before {
+  display: none;
+}
+
+.MenuButton:hover .MenuIcon:after {
+  display: block;
+}
+
+.offcanvas-header .btn-close {
+  margin: 0 !important;
+}
+
+.MenuBtn .MenuIcon {
+  padding: 5px;
+  background-color: #854b3c;
+  width: 50px;
+}
+
+.MenuBtn .MenuIcon i {
+  color: white;
+  font-size: 22px;
+}
+
+.MenuBtn span {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.listMenu {
+  list-style: none;
+}
+
+.listMenu li {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  text-align: left;
+  padding: 16px 0px;
+  position: relative;
+  width: fit-content;
+}
+
+.listMenu li::before {
+  content: "";
+  height: 0px;
+  transition: height cubic-bezier(0.19, 0.53, 0.39, 0.87) 0.3s;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  background-color: #854b3c;
+  z-index: -1;
+}
+
+.listMenu li:hover::before {
+  height: 8px;
+}
+
+.listMenu li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.listMenu2 {
+  list-style: none;
+}
+
+.listMenu2 li {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-align: left;
+  padding: 8px 0px;
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.listMenu2 li svg {
+  width: 20px;
+  height: 20px;
+}
+
+.listMenu2 li::before {
+  content: "";
+  height: 0px;
+  transition: height cubic-bezier(0.19, 0.53, 0.39, 0.87) 0.3s;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  background-color: #854b3c;
+  z-index: -1;
+}
+
+.listMenu2 li:hover::before {
+  height: 8px;
+}
+
+.listMenu2 li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.listMenuIcon {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  margin-top: 40px;
+}
+
+.listMenuIcon a {
+  color: #854b3c;
+  font-size: 21px;
+}
+
+.ContactInfo {
+  text-align: left;
+}
+
+.ContactInfo span {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  display: block;
+  font-size: 9px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ContactInfo p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 14px;
+  font-weight: 600;
+}
+
+.HeaderLogo img {
+  width: 100px;
+}
+
+.ProfileSET {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 0.9375rem;
+}
+
+.ProfileSET ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: table;
+  text-align: right;
+  float: right;
+  font-size: 1em;
+}
+
+.ProfileSET ul li {
+  margin: 0;
+  padding: 0 0 0 35px;
+  display: table-cell;
+  line-height: 1em;
+  vertical-align: top;
+}
+
+.ProfileSET ul li:first-child {
+  padding-left: 0px;
+}
+
+.ProfileSET svg {
+  width: 22px;
+}
+
+.Cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Cart p {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.Cart span {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  display: block;
+  font-size: 9px;
+  line-height: 14px;
+  letter-spacing: 2px;
+}
+
+/** Brand section **/
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+.BrandWrapper {
+  margin: 3rem 0;
+}
+
+.BrandQuote h1 {
+  font-family: "Cedarville Cursive", cursive;
+  font-size: 28px;
+  margin-bottom: 3rem;
+}
+
+.BrandGallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  justify-content: center;
+  gap: 20px;
+}
+
+.BrandType {
+  max-width: 412px;
+  height: 355px;
+  width: 320px;
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.BrandType img {
+  width: 100%;
+  height: 100%;
+}
+
+.ImageOverlayEffect {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background: rgb(23, 24, 24);
+  background: linear-gradient(
+    0deg,
+    rgba(23, 24, 24, 1) 0%,
+    rgba(33, 33, 33, 0) 100%
+  );
+}
+
+.BrandType h2 {
+  position: absolute;
+  top: 4rem;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.BrandType p {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  padding: 6px 15px;
+  text-transform: capitalize;
+}
+
+/**----------- bestseller------------ **/
+.BestSellerWrapper {
+  margin-bottom: 5em;
+}
+
+.BestSellerHeading {
+  margin-bottom: 3rem;
+}
+.ProductCatalogue {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 90px;
+  gap: 2rem;
+}
+
+.ButtonContainer {
+  width: 100%;
+}
+
+.ViewMoreButton {
+  background-color: #854b3c;
+  color: #fff;
+  border-color: #854b3c;
+  padding: 10px 120px;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid #854b3c;
+  letter-spacing: 2px;
+}
+
+.ViewMoreButton:hover {
+  background-color: #fff;
+  color: #854b3c;
+  border-color: #854b3c;
+  padding: 10px 120px;
+  border: 1px solid #854b3c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/** .OurStoryWrapper**/
+
+.OurStoryWrapper {
+  margin-bottom: 3rem;
+}
+
+.OurStoryHeading h1 {
+  margin-bottom: 3rem;
+}
+
+.OurStoryContent {
+  display: flex;
+  padding: 0 6rem;
+}
+
+.OurStory {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 6rem 0 0 0;
+  text-align: left;
+}
+
+.OurStory h1 {
+  font-size: 25px;
+}
+
+.OurStoryImageConatiner {
+  width: 60%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OurStoryImageConatiner img {
+  width: 500px;
+  height: 100%;
+}
+
+.oustoryquote {
+  padding-top: 7rem;
+}
+
+/**----------responsive------------**/
+@media (max-width: 991px) {
+  .ContactInfo {
+    display: none;
+  }
+
+  .OurStoryContent{
+     flex-direction: column;
+  }
+
+  .OurStory,.OurStoryImageConatiner,.OurStoryImageConatiner img{
+    width: 100%;
+  }
+
+  .OurStory{
+    margin-bottom: 20px;
+    padding-top: 0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeaderWrapper {
+    padding: 23px 32px;
+  }
+  .HeaderLogo img {
+    width: 83px;
+  }
+
+  .ProductCatalogue{
+    padding: 0px 20px;
+  }
+
+  .ProfileSET ul li {
+    margin: 0;
+    padding: 0px 0 0 20px;
+    display: table-cell;
+    line-height: 1em;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 667px) {
+  .MenuSet {
+    width: 15%;
+  }
+
+  .ProfileSET {
+    width: 15%;
+  }
+  .ProfileSET ul li:first-child,
+  .ProfileSET ul li:nth-child(2) {
+    display: none;
+  }
+
+  .MenuBtn span:last-child {
+    display: none;
+  }
+
+  .MenuButton {
+    width: fit-content;
+  }
+
+  .ProductSearch{
+    display: block;
+    text-align: left;
+    margin-left: 2rem;
+    position: relative;
+    width: 39%;
+
+
+  }
+
+  .InputSearch{
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-right: none;
+    padding: 8px 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .InputSearch:focus-visible{
+    outline: none;
+}
+
+.InputSearch:focus{
+    background-color: #ffffff1a;
+    border-bottom: 2px solid #854b3c;
+}
+
+.SearchIcon{
+  position: absolute;
+  width: 16px;
+  right: 5px;
+}
+
+.BrandType{
+  width: 270px;
+}
+
+}
+
+@media (max-width:567px){
+
+  .OurStoryContent{
+    padding: 0 2rem;
+}
+
+  .BrandType{
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width:480px) {
+  .HeaderWrapper {
+    padding: 22px 11px;
+}  
+
+.MenuBtn .MenuIcon {
+  padding: 3px;
+  background-color: #854b3c;
+  width: 42px;
+}
+.HeaderLogo img {
+width: 76px;
+}
+
+.ViewMoreButton {
+  padding: 10px 100px;
+}
+
+.HeaderWrapper {
+  gap: 4rem;
+}
+
+.BrandType {
+  width: 87%;
+}
+}

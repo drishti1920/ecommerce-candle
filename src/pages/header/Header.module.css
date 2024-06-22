@@ -1,0 +1,256 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.HeaderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 35px 32px;
+}
+
+.MenuSet {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.MenuButton {
+  width: 165px;
+  box-shadow: 5px 5px 25px -5px rgba(143, 197, 192, 0.4);
+  display: flex;
+  align-items: center;
+}
+
+.MenuButton:hover {
+  box-shadow: 2px 2px 6px 0px rgba(143, 197, 192, 0.2);
+}
+
+.MenuBtn {
+  border: none;
+  background: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.MenuIcon:before {
+  content: "\F479";
+  font-family: bootstrap-icons;
+  color: white;
+  font-size: 22px;
+}
+
+.offcanvas-header button.btn-close {
+  margin: 0 !important;
+}
+
+.MenuIcon:after {
+  display: none;
+  color: white;
+  content: "\F12F";
+  font-family: bootstrap-icons;
+  font-size: 22px;
+}
+
+.MenuButton:hover .MenuIcon:before {
+  display: none;
+}
+
+.MenuButton:hover .MenuIcon:after {
+  display: block;
+}
+
+.offcanvas-header .btn-close {
+  margin: 0 !important;
+}
+
+.MenuBtn .MenuIcon {
+  padding: 5px;
+  background-color: #a8e8e2;
+  width: 50px;
+}
+
+.MenuBtn .MenuIcon i {
+  color: white;
+  font-size: 22px;
+}
+
+.MenuBtn span {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.listMenu {
+  list-style: none;
+}
+
+.listMenu li {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  text-align: left;
+  padding: 8px 0px;
+  position: relative;
+  width: fit-content;
+}
+
+.listMenu li::before {
+  content: "";
+  height: 0px;
+  transition: height cubic-bezier(0.19, 0.53, 0.39, 0.87) 0.3s;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  background-color: #a8e8e2;
+  z-index: -1;
+}
+
+.listMenu li:hover::before {
+  height: 8px;
+}
+
+.listMenu li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.listMenu2 {
+  list-style: none;
+}
+
+.listMenu2 li {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-align: left;
+  padding: 8px 0px;
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.listMenu2 li svg {
+  width: 16px;
+}
+
+.listMenu2 li::before {
+  content: "";
+  height: 0px;
+  transition: height cubic-bezier(0.19, 0.53, 0.39, 0.87) 0.3s;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  background-color: #a8e8e2;
+  z-index: -1;
+}
+
+.listMenu2 li:hover::before {
+  height: 8px;
+}
+
+.listMenu2 li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.listMenuIcon {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+.listMenuIcon a {
+  color: #a8e8e2;
+  font-size: 21px;
+}
+
+.ContactInfo {
+  text-align: left;
+}
+
+.ContactInfo span {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  display: block;
+  font-size: 9px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ContactInfo p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 14px;
+  font-weight: 600;
+}
+
+.HeaderLogo img {
+  width: 100px;
+}
+
+.ProfileSET {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 0.9375rem;
+}
+
+.ProfileSET ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: table;
+  text-align: right;
+  float: right;
+  font-size: 1em;
+}
+
+.ProfileSET ul li {
+  margin: 0;
+  padding: 0 0 0 35px;
+  display: table-cell;
+  line-height: 1em;
+  vertical-align: top;
+}
+
+.ProfileSET ul li:first-child {
+  padding-left: 0px;
+}
+
+.ProfileSET svg {
+  width: 22px;
+}
+
+.Cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Cart p {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.Cart span {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  display: block;
+  font-size: 9px;
+  line-height: 14px;
+  letter-spacing: 2px;
+}
